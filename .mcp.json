@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp?project_ref=aqrteeywkgmoabhiwhgw&features=docs%2Caccount%2Cdatabase%2Cdebugging%2Cdevelopment%2Cfunctions%2Cbranching"
+    },
+    "chrome-devtools": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--isolated",
+        "--no-page-id-routing",
+        "--viewport",
+        "1280x900",
+        "--screenshotMaxWidth",
+        "900"
+      ],
+      "env": {}
+    }
+  }
+}

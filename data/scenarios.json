@@ -1,0 +1,405 @@
+{
+  "version": "1.0.0",
+  "traits": {
+    "anxiety": "Runs every scenario",
+    "vulnerability_under_pressure": "Steady under pressure",
+    "assertiveness": "Takes the lead",
+    "social_energy": "People battery",
+    "intellectual_curiosity": "Rabbit holes",
+    "adventurousness": "Down for anything",
+    "compassion": "Feels it for people",
+    "trust": "Gives the benefit of the doubt",
+    "orderliness": "Keeps things in order",
+    "self_discipline": "Actually finishes things"
+  },
+  "scenarios": [
+    {
+      "id": "s1",
+      "prompt": "The group chat decides at 1am that everyone's doing something tomorrow.",
+      "options": [
+        {
+          "text": "I'm in. I'll deal with being tired later.",
+          "w": {
+            "adventurousness": 2,
+            "social_energy": 1,
+            "self_discipline": -1
+          }
+        },
+        {
+          "text": "Seen it. I'll reply in the morning.",
+          "w": {
+            "social_energy": -1,
+            "anxiety": -1
+          }
+        },
+        {
+          "text": "In, but someone send the actual plan first.",
+          "w": {
+            "orderliness": 2,
+            "anxiety": 1
+          }
+        },
+        {
+          "text": "Somehow I end up organising the whole thing.",
+          "w": {
+            "assertiveness": 2,
+            "orderliness": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "prompt": "You said yes to something two weeks ago. It's tonight. You don't want to go.",
+      "options": [
+        {
+          "text": "Go anyway. I said I would.",
+          "w": {
+            "self_discipline": 2,
+            "compassion": 1,
+            "vulnerability_under_pressure": 1
+          }
+        },
+        {
+          "text": "Cancel. I'll survive the guilt.",
+          "w": {
+            "self_discipline": -2,
+            "social_energy": -1
+          }
+        },
+        {
+          "text": "Spend forty minutes writing the cancel text.",
+          "w": {
+            "anxiety": 2,
+            "compassion": 1
+          }
+        },
+        {
+          "text": "Show up for half an hour, then quietly leave.",
+          "w": {
+            "social_energy": -1,
+            "compassion": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "prompt": "Someone in the group is clearly off tonight and hasn't said why.",
+      "options": [
+        {
+          "text": "Ask them straight out what's going on.",
+          "w": {
+            "assertiveness": 2,
+            "compassion": 1
+          }
+        },
+        {
+          "text": "Say nothing now, text them privately after.",
+          "w": {
+            "compassion": 2,
+            "assertiveness": -1
+          }
+        },
+        {
+          "text": "Leave it. They'll bring it up if they want to.",
+          "w": {
+            "compassion": -1,
+            "trust": 1
+          }
+        },
+        {
+          "text": "Start wondering if it's something I did.",
+          "w": {
+            "anxiety": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "prompt": "You open one link at 11pm out of mild curiosity.",
+      "options": [
+        {
+          "text": "Still reading at 1am, twelve tabs deep.",
+          "w": {
+            "intellectual_curiosity": 2,
+            "self_discipline": -1
+          }
+        },
+        {
+          "text": "Skim it, close it, forget it existed.",
+          "w": {
+            "intellectual_curiosity": -1
+          }
+        },
+        {
+          "text": "Save it to read properly later. I won't.",
+          "w": {
+            "intellectual_curiosity": 1,
+            "self_discipline": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "prompt": "New place, and there's something on the menu you can't pronounce.",
+      "options": [
+        {
+          "text": "Order it. Worst case it's a story.",
+          "w": {
+            "adventurousness": 2
+          }
+        },
+        {
+          "text": "Get the thing I always get.",
+          "w": {
+            "adventurousness": -2,
+            "orderliness": 1
+          }
+        },
+        {
+          "text": "Ask what's actually in it, then decide.",
+          "w": {
+            "intellectual_curiosity": 1,
+            "adventurousness": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "prompt": "Group task, real deadline, and nobody has assigned anything yet.",
+      "options": [
+        {
+          "text": "Fine, I'll start handing out jobs.",
+          "w": {
+            "assertiveness": 2,
+            "orderliness": 1
+          }
+        },
+        {
+          "text": "Wait to be told what my bit is.",
+          "w": {
+            "assertiveness": -2
+          }
+        },
+        {
+          "text": "Quietly do my part properly and say nothing.",
+          "w": {
+            "self_discipline": 2,
+            "assertiveness": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "prompt": "Your room, right now, no tidying first.",
+      "options": [
+        {
+          "text": "Clean. I'd let anyone walk in.",
+          "w": {
+            "orderliness": 2
+          }
+        },
+        {
+          "text": "The floor is doing storage.",
+          "w": {
+            "orderliness": -2
+          }
+        },
+        {
+          "text": "Surfaces clear, drawers cursed.",
+          "w": {
+            "orderliness": 1,
+            "self_discipline": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "prompt": "Ten minutes before you're meant to leave, they cancel.",
+      "options": [
+        {
+          "text": "Quiet relief, honestly.",
+          "w": {
+            "social_energy": -2
+          }
+        },
+        {
+          "text": "Annoyed. I'd built my whole day around it.",
+          "w": {
+            "orderliness": 1,
+            "anxiety": 1,
+            "vulnerability_under_pressure": -1
+          }
+        },
+        {
+          "text": "Fine. I'll find something else to do with it.",
+          "w": {
+            "adventurousness": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "prompt": "Someone you just met tells you a story that's slightly too good.",
+      "options": [
+        {
+          "text": "Believe it. Why would they make that up.",
+          "w": {
+            "trust": 2
+          }
+        },
+        {
+          "text": "Nod along and quietly doubt all of it.",
+          "w": {
+            "trust": -2
+          }
+        },
+        {
+          "text": "Start asking questions about the details.",
+          "w": {
+            "intellectual_curiosity": 2,
+            "trust": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "prompt": "It's 2am and tomorrow actually matters.",
+      "options": [
+        {
+          "text": "Lying there running every possible version of it.",
+          "w": {
+            "anxiety": 2
+          }
+        },
+        {
+          "text": "Out cold in about four minutes.",
+          "w": {
+            "anxiety": -2,
+            "vulnerability_under_pressure": 1
+          }
+        },
+        {
+          "text": "One more scroll. Then definitely sleep.",
+          "w": {
+            "self_discipline": -1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "prompt": "Something breaks halfway through, and people are looking at you.",
+      "options": [
+        {
+          "text": "Go quiet and just fix it.",
+          "w": {
+            "vulnerability_under_pressure": 2,
+            "self_discipline": 1
+          }
+        },
+        {
+          "text": "Brain empties. Someone else take this one.",
+          "w": {
+            "vulnerability_under_pressure": -2
+          }
+        },
+        {
+          "text": "Start talking it through out loud until it's solved.",
+          "w": {
+            "assertiveness": 2,
+            "vulnerability_under_pressure": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "prompt": "A task you've been avoiding for three days is still there.",
+      "options": [
+        {
+          "text": "Do it badly and get it gone.",
+          "w": {
+            "self_discipline": 2
+          }
+        },
+        {
+          "text": "Still avoiding it. Tomorrow.",
+          "w": {
+            "self_discipline": -2,
+            "anxiety": 1
+          }
+        },
+        {
+          "text": "Reorganise my entire to-do system instead.",
+          "w": {
+            "orderliness": 2,
+            "self_discipline": -1
+          }
+        }
+      ]
+    }
+  ],
+  "openQuestions": {
+    "anxiety": "What's the thing your brain keeps going back to lately, even when there's nothing to do about it?",
+    "vulnerability_under_pressure": "When did something last go sideways with people watching? What did you actually do?",
+    "assertiveness": "When did you last want to say something in a room and didn't? What stopped you?",
+    "social_energy": "Think of the last time you were properly around people. How did you feel walking home?",
+    "intellectual_curiosity": "What have you gone way too deep on recently that nobody asked you about?",
+    "adventurousness": "What's the last thing you did that you hadn't done before? How did that happen?",
+    "compassion": "When did you last go out of your way for someone? Be specific about what it cost you.",
+    "trust": "When did you last decide someone wasn't being straight with you? What tipped it?",
+    "orderliness": "What's the one thing you keep genuinely organised, and what have you let fall apart?",
+    "self_discipline": "What did you start this year and stop? What actually happened there?"
+  },
+  "domains": {
+    "steadiness": {
+      "name": "Steadiness",
+      "blurb": "How level you stay when things move",
+      "facets": {
+        "vulnerability_under_pressure": 1,
+        "anxiety": -1
+      }
+    },
+    "outgoing": {
+      "name": "Outgoing",
+      "blurb": "How much you push into the room",
+      "facets": {
+        "assertiveness": 1,
+        "social_energy": 1
+      }
+    },
+    "curiosity": {
+      "name": "Curiosity",
+      "blurb": "How far you chase the new thing",
+      "facets": {
+        "intellectual_curiosity": 1,
+        "adventurousness": 1
+      }
+    },
+    "warmth": {
+      "name": "Warmth",
+      "blurb": "How much you lean toward people",
+      "facets": {
+        "compassion": 1,
+        "trust": 1
+      }
+    },
+    "follow_through": {
+      "name": "Follow-through",
+      "blurb": "How reliably things get finished",
+      "facets": {
+        "orderliness": 1,
+        "self_discipline": 1
+      }
+    }
+  }
+}
